@@ -1,0 +1,63 @@
+﻿archetype (adl_version=1.4)
+	openEHR-EHR-ITEM_LIST.list_1.v0
+
+concept
+	[at0000]	-- List 1
+language
+	original_language = <[ISO_639-1::sv]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"">
+		>
+	>
+	lifecycle_state = <"0">
+	other_contributors = <>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"BCFEFAE311FB42C0EC68258F5399B4C2">
+	>
+
+definition
+	ITEM_LIST[at0000] occurrences matches {0..*} matches {	-- List 1
+		items cardinality matches {0..*; unordered} matches {
+			ELEMENT[at0002] occurrences matches {0..1} matches {	-- ögon left
+				value matches {
+					C_DV_QUANTITY <
+					>
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {	-- Nytt element
+				value matches {
+					C_DV_QUANTITY <
+					>
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["sv"] = <
+			items = <
+				["at0000"] = <
+					text = <"List 1">
+					description = <"unknown">
+				>
+				["at0002"] = <
+					text = <"ögon left">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Nytt element">
+					description = <"*">
+				>
+			>
+		>
+	>
